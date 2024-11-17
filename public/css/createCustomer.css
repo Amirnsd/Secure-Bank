@@ -1,0 +1,214 @@
+/* General styles for body and container */
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Changed to match previous background color */
+}
+
+.navbar {
+    background-color: #a6192e; /* CIBC red */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #f6d94a; /* CIBC yellow on hover */
+    list-style-type: none ;
+    text-decoration: none;
+
+}
+
+/* Style the links to look like buttons */
+a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f6d94a; /* CIBC yellow */
+    color: #a6192e; /* CIBC red */
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #a6192e;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a.btn:hover {
+    background-color: #d1b532; /* Slightly paler yellow for hover */
+    color: white;
+}
+
+/* Style the submit button as a button */
+button[type="submit"].btn {
+    width: auto;
+    background-color: #f6d94a; /* CIBC yellow */
+    color: #a6192e; /* CIBC red */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button[type="submit"].btn:hover {
+    background-color: #d1b532; /* Slightly paler yellow for hover */
+    color: white;
+}
+
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly enhanced box shadow */
+    border-radius: 8px;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+    color: #a6192e; /* CIBC red for the title */
+}
+
+/* Form fields */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    border-color: #f6d94a; /* CIBC yellow on focus */
+    outline: none;
+}
+
+/* Submit button */
+button[type="submit"] {
+    background-color: #f6d94a; /* CIBC yellow */
+    color: #a6192e; /* CIBC red */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #a6192e; /* CIBC red on hover */
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background-color: #a6192e; /* CIBC red */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative; /* Change from fixed to relative */
+    width: 100%;
+    bottom: 0;
+    margin-top: 20px; /* Ensure space between footer and content */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Links */
+a {
+    color: #3498db; /* Blue link color */
+    text-decoration: none;
+    list-style-type: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    .navbar {
+        padding: 15px 10px;
+    }
+
+    .navbar h1 {
+        font-size: 1.2em;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 5px;
+        font-size: 14px;
+    }
+
+    .form-group input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+        margin: 5px auto;
+    }
+
+    .navbar h1 {
+        font-size: 1em;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

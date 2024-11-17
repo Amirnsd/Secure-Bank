@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/customerinfo.css">
+    <title>Personal Information</title>
+</head>
+<body>
+   
+    <div class="navbar">
+        <h1>Customer Information Management</h1>
+        <nav>
+            <a href="/" class="btn">Home</a>
+            <a href="/saving" class="btn">Savings Account</a>
+            <a href="/chequing" class="btn">Chequing Account</a>
+        </nav>
+    </div>
+
+   
+    <div class="container">
+        <h1>Customers Information</h1>
+        <a href="/createcustomer" class="create-customer-btn">Create new Customer</a>
+        <% if (data && data.length > 0) { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Account Number</th>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Street Name</th>
+                        <th>City</th>
+                        <th>Province</th>
+                        <th>Postal Code</th>
+                        <th>Email</th>
+                        <th>Date Created</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% data.forEach(person => { %>
+                        <tr>
+                            <td><%= person.AccountNumber %>
+                              <form action="/deletecustomer/<%=person.AccountNumber %>" method="POST" class="delete-form">
+                                    <button type="submit" class="deleteBtn">Delete</button>
+                              </form>
+                                <a href="/updatecustomer/<%=person.AccountNumber %>" class="updateBtn">Update</a>
+                            </td>
+                            <td><%= person.Name %></td>
+                            <td><%= person.PhoneNumber %></td>
+                            <td><%= person.StreetName %></td>
+                            <td><%= person.City %></td>
+                            <td><%= person.Province %></td>
+                            <td><%= person.Postalcode %></td>
+                            <td><%= person.Email %></td>
+                            <td><%= person.DateCreated %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p>No personal information available.</p>
+        <% } %>
+    </div>
+
+  
+    <div class="footer">
+        <p>&copy; 2024 Customers Information System</p>
+    </div>
+
+</body>
+</html>

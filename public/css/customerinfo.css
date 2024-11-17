@@ -1,0 +1,257 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #a6192e; /* CIBC red */
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.header .user-greeting {
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar */
+.navbar {
+    background-color: #a6192e; /* CIBC red */
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.navbar nav {
+    display: flex;
+    gap: 15px;
+}
+.navbar .btn {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.navbar .btn:hover {
+    background-color: #f6d94a; /* CIBC yellow */
+    color: #a6192e;
+}
+
+
+/* Title */
+.container h1 {
+    color: #a6192e;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f6d94a; /* CIBC yellow */
+    color: #a6192e;
+    font-weight: 500;
+}
+td {
+    background-color: #ffffff;
+}
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Style the 'Create new Customer' link to look like a button */
+a.create-customer-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f6d94a; /* CIBC yellow */
+    color: #a6192e; /* CIBC red */
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #a6192e;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* General styles for all <a> tags to look like buttons */
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f6d94a; /* CIBC yellow */
+    color: #a6192e; /* CIBC red */
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #a6192e;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover {
+    background-color: #d1b532; /* Slightly paler yellow for hover */
+    color: white;
+}
+
+
+a.create-customer-btn:hover {
+    background-color: #d1b532; /* Slightly paler yellow for hover */
+    color: white;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #a6192e;
+    color: white;
+    font-size: 0.9em;
+}
+
+
+
+
+
+/* Style for Delete Button */
+.deleteBtn {
+    background-color: #e74c3c; /* Red background */
+    margin: 10px;
+    color: white; /* White text */
+    padding: 8px 16px; /* Padding for better spacing */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 14px; /* Set font size */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Hover effect */
+.deleteBtn:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Focus effect */
+.deleteBtn:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.8); /* Add shadow effect when focused */
+}
+
+
+.updateBtn{
+    background-color: #f6d94a; /* Red background */
+    margin: 10px;
+    color: white; /* White text */
+    padding: 8px 16px; /* Padding for better spacing */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 14px; /* Set font size */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+
+}
+
+
+.updateBtn:hover {
+    background-color: #d1b532; /* Darker red on hover */
+}
+
+
+.updateBtn:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.8); /* Add shadow effect when focused */
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .navbar nav {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar .btn {
+        margin: 5px;
+    }
+
+    a.create-customer-btn {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header .logo {
+        margin-bottom: 10px;
+    }
+
+    td, th {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .deleteBtn, .updateBtn {
+        padding: 6px 12px;
+        margin: 5px;
+        font-size: 12px;
+    }
+}

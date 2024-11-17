@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chequing Account Information</title>
+    <link rel="stylesheet" href="/css/chequingInfo.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Chequing Account Management</h1>
+        <nav>
+            <a href="/" class="btn">Home</a>
+            <a href="/customerinfo" class="btn">Customer Information</a>
+            <a href="/saving" class="btn">Saving Account</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <h2>Chequing Account Information</h2>
+        <% if (data && data.length > 0) { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Chequing ID</th>
+                        <th>Account Number</th>
+                        <th>Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% data.forEach(account => { %>
+                        <tr>
+                            <td><%= account.ChequingId %></td>
+                            <td><%= account.AccountNumber %></td>
+                            <td><%= account.Balance %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p>No chequing account information available.</p>
+        <% } %>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Secure Bank Inc.</p>
+    </footer>
+</body>
+</html>
